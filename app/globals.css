@@ -134,11 +134,131 @@ button, input, select, textarea {
   font-size: 1.05rem;
 }
 
-.section-block {
+.about-section {
+  background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
+  border: none;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+.about-content h2 {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+
+.about-content > p {
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.features-list {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.feature-item {
+  padding: 1rem;
   background: white;
-  border-radius: 1.5rem;
+  border-radius: 0.75rem;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.feature-item strong {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #1f2937;
+}
+
+.feature-item span {
+  color: #6b7280;
+  font-size: 0.95rem;
+}
+
+.owner-card {
+  background: white;
+  border-radius: 1rem;
   padding: 2rem;
   border: 1px solid #e5e7eb;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.owner-image {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.owner-image img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #2563eb;
+}
+
+.owner-info h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.owner-info > p:first-of-type {
+  color: #2563eb;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.owner-info > p:last-of-type {
+  font-style: italic;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #4b5563;
+}
+
+.owner-credentials {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.owner-credentials span {
+  background: #eff6ff;
+  color: #1d4ed8;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.cta-section {
+  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+  color: white;
+  text-align: center;
+}
+
+.cta-content h2 {
+  margin-bottom: 1rem;
+  font-size: 2.5rem;
+}
+
+.cta-content p {
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+.cta-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .section-heading {
@@ -337,31 +457,205 @@ button, input, select, textarea {
   color: #374151;
 }
 
-.enquiry-form input,
-.enquiry-form textarea {
-  width: 100%;
-  border: 1px solid #d1d5db;
-  border-radius: 0.85rem;
-  padding: 0.95rem 1rem;
-  background: #ffffff;
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 0.75rem;
 }
 
-.success-message {
+.feature-tag {
+  background: #f0f9ff;
+  color: #0369a1;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.floor-plan-placeholder,
+.virtual-tour-placeholder {
+  background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
+  border: 2px dashed #d1d5db;
+  border-radius: 1rem;
+  min-height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.placeholder-content {
+  text-align: center;
+  padding: 2rem;
+}
+
+.placeholder-content h3 {
+  margin: 0 0 0.5rem;
+  color: #374151;
+}
+
+.placeholder-content p {
+  margin: 0 0 1.5rem;
+  color: #6b7280;
+}
+
+.amenities-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.amenity-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  background: #f8fafc;
+  border-radius: 0.75rem;
+}
+
+.amenity-icon {
+  font-size: 1.5rem;
+}
+
+.amenity-item strong {
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+.amenity-item p {
+  margin: 0;
+  color: #6b7280;
+  font-size: 0.9rem;
+}
+
+.documents-list {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.document-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background: #f8fafc;
+  border-radius: 0.5rem;
+}
+
+.document-item span:first-child {
+  font-weight: 500;
+}
+
+.document-item span:last-child {
   color: #059669;
-  background: #ecfdf5;
-  border: 1px solid #a7f3d0;
-  border-radius: 0.85rem;
-  padding: 1rem;
-  text-align: center;
+  font-weight: 600;
 }
 
-.error-message {
-  color: #dc2626;
-  background: #fef2f2;
-  border: 1px solid #fca5a5;
-  border-radius: 0.85rem;
-  padding: 1rem;
+.price-card {
+  background: linear-gradient(135deg, #dcfce7 0%, #bbf7d0 100%);
+  border: 2px solid #16a34a;
+}
+
+.price-card h3 {
+  font-size: 2rem;
+  color: #16a34a;
+  margin: 0 0 0.5rem;
+}
+
+.price-card > p {
+  color: #166534;
+  margin: 0 0 1.5rem;
+  font-weight: 600;
+}
+
+.price-breakdown {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.price-breakdown > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #86efac;
+}
+
+.price-breakdown span {
+  color: #374151;
+}
+
+.price-breakdown strong {
+  color: #16a34a;
+}
+
+.map-placeholder {
+  min-height: 180px;
+  border-radius: 1rem;
+  background: linear-gradient(145deg, #dbeafe 0%, #e0f2fe 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.map-content {
   text-align: center;
+  padding: 1rem;
+}
+
+.map-content h4 {
+  margin: 0 0 0.5rem;
+  color: #1d4ed8;
+}
+
+.map-content p {
+  margin: 0 0 1rem;
+  color: #6b7280;
+}
+
+.seller-profile {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.seller-avatar img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.seller-profile h4 {
+  margin: 0 0 0.25rem;
+  font-size: 1.1rem;
+}
+
+.seller-profile > div > p {
+  margin: 0 0 0.5rem;
+  color: #059669;
+  font-size: 0.9rem;
+}
+
+.seller-rating {
+  color: #f59e0b;
+  font-size: 0.9rem;
+}
+
+.seller-rating span {
+  color: #6b7280;
+  margin-left: 0.5rem;
+}
+
+.contact-info {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.contact-info p {
+  margin: 0;
+  color: #374151;
 }
 
 .form-shell,
@@ -468,12 +762,48 @@ button, input, select, textarea {
     grid-template-columns: 1fr;
   }
 
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .owner-card {
+    padding: 1.5rem;
+  }
+
   .table-row {
     grid-template-columns: 1fr;
     padding: 0.9rem 1rem;
   }
 
   .table-row span {
+    width: 100%;
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .amenities-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .seller-profile {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .price-breakdown > div {
+    flex-direction: column;
+    gap: 0.25rem;
+    align-items: flex-start;
+  }
+
+  .cta-actions {
+    flex-direction: column;
+  }
+
+  .cta-actions .button {
     width: 100%;
   }
 }
