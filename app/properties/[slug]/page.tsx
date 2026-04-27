@@ -1,13 +1,14 @@
 import Link from 'next/link';
 import { properties } from '../../../lib/properties';
 import { notFound } from 'next/navigation';
+import EnquiryForm from '../../../components/EnquiryForm';
 
 interface Props {
-  params: { id: string };
+  params: { slug: string };
 }
 
 export default function PropertyDetailPage({ params }: Props) {
-  const property = properties.find((item) => item.id === params.id);
+  const property = properties.find((item) => item.slug === params.slug);
 
   if (!property) {
     notFound();
@@ -60,21 +61,7 @@ export default function PropertyDetailPage({ params }: Props) {
           </div>
           <div className="info-card">
             <h3>Enquiry</h3>
-            <form className="enquiry-form">
-              <label>
-                Name
-                <input type="text" placeholder="Your name" />
-              </label>
-              <label>
-                Email
-                <input type="email" placeholder="you@example.com" />
-              </label>
-              <label>
-                Message
-                <textarea rows={4} placeholder="I am interested in this property." />
-              </label>
-              <button type="button" className="button primary">Send enquiry</button>
-            </form>
+            <EnquiryForm propertyId={property.id} />
           </div>
         </aside>
       </div>

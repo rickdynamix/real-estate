@@ -1,5 +1,6 @@
 export type Property = {
   id: string;
+  slug: string;
   title: string;
   type: string;
   price: number;
@@ -22,6 +23,7 @@ export type Property = {
 export const properties: Property[] = [
   {
     id: '1',
+    slug: 'sunlit-3bhk-near-central-park',
     title: 'Sunlit 3BHK near Central Park',
     type: 'Apartment',
     price: 14500000,
@@ -42,6 +44,7 @@ export const properties: Property[] = [
   },
   {
     id: '2',
+    slug: 'luxury-4bhk-villa-with-pool',
     title: 'Luxury 4BHK Villa with Pool',
     type: 'Villa',
     price: 32000000,
@@ -62,6 +65,7 @@ export const properties: Property[] = [
   },
   {
     id: '3',
+    slug: 'cozy-2bhk-in-downtown-locality',
     title: 'Cozy 2BHK in downtown locality',
     type: 'Condo',
     price: 8800000,
@@ -81,3 +85,4 @@ export const properties: Property[] = [
     }
   }
 ];
+

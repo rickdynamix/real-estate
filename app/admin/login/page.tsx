@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 
-export default function SellerLoginPage() {
+export default function AdminLoginPage() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
@@ -12,28 +12,27 @@ export default function SellerLoginPage() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Simulate login - in real app, this would be API call
-    if (email === 'rohan@propease.com' && password === 'password') {
-      localStorage.setItem('sellerLoggedIn', 'true');
-      localStorage.setItem('sellerEmail', email);
-      router.push('/seller/dashboard');
+    // Simulate admin login - hardcoded credentials
+    if (email === 'admin@propease.com' && password === 'admin123') {
+      localStorage.setItem('adminLoggedIn', 'true');
+      router.push('/admin');
     } else {
-      setError('Invalid email or password');
+      setError('Invalid admin credentials');
     }
   };
 
   return (
     <main className="page-shell form-shell">
       <div className="auth-card">
-        <p className="eyebrow">Seller access</p>
-        <h1>Seller login</h1>
-        <p>Access your listing dashboard, manage properties, and review enquiries.</p>
+        <p className="eyebrow">Admin access</p>
+        <h1>Admin login</h1>
+        <p>Access the admin control panel to manage sellers and monitor enquiries.</p>
         <form className="auth-form" onSubmit={handleSubmit}>
           <label>
             Email
             <input
               type="email"
-              placeholder="seller@example.com"
+              placeholder="admin@propease.com"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
@@ -50,9 +49,9 @@ export default function SellerLoginPage() {
             />
           </label>
           {error && <p className="error-message">{error}</p>}
-          <button type="submit" className="button primary">Sign in</button>
+          <button type="submit" className="button primary">Sign in as admin</button>
           <p className="form-footer">
-            No account yet? <Link href="/seller/register">Register as seller</Link>
+            <Link href="/">Return to marketplace</Link>
           </p>
         </form>
       </div>

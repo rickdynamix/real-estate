@@ -12,7 +12,7 @@ export default function HomePage() {
             Discover homes, create listings, manage properties, and share offers with a powerful Next.js experience.
           </p>
           <div className="hero-actions">
-            <a className="button primary" href="/properties/1">Browse Listings</a>
+            <a className="button primary" href="/properties/sunlit-3bhk-near-central-park">Browse Listings</a>
             <a className="button secondary" href="/seller/login">Seller Login</a>
           </div>
         </div>
