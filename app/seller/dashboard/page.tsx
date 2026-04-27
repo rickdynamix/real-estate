@@ -1,11 +1,16 @@
+'use client';
+
 import Link from 'next/link';
+import { useState, useEffect } from 'react';
 
 export default function SellerDashboardPage() {
-  // Simulate logged in seller
-  const sellerEmail = 'rohan@propease.com'; // In real app, from auth
+  const [enquiries, setEnquiries] = useState<any[]>([]);
 
-  // Get enquiries for this seller's properties
-  const enquiries = typeof window !== 'undefined' ? JSON.parse(localStorage.getItem('enquiries') || '[]') : [];
+  useEffect(() => {
+    // Get enquiries for this seller's properties
+    const storedEnquiries = JSON.parse(localStorage.getItem('enquiries') || '[]');
+    setEnquiries(storedEnquiries);
+  }, []);
 
   return (
     <main className="page-shell dashboard-shell">

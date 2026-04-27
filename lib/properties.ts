@@ -37,9 +37,9 @@ export const properties: Property[] = [
     address: 'Sector 15A, Andheri East, Mumbai',
     amenities: ['Hospital', 'School', 'Market'],
     seller: {
-      name: 'Ayesha Patel',
-      phone: '+91 98765 43210',
-      email: 'ayesha@propease.com'
+      name: 'Rohan Gupta',
+      phone: '+91 91234 56789',
+      email: 'rohan@propease.com'
     }
   },
   {
@@ -79,9 +79,9 @@ export const properties: Property[] = [
     address: 'Anna Salai, Chennai',
     amenities: ['Hospital', 'School', 'Market'],
     seller: {
-      name: 'Priya Nair',
-      phone: '+91 99876 54321',
-      email: 'priya@propease.com'
+      name: 'Rohan Gupta',
+      phone: '+91 91234 56789',
+      email: 'rohan@propease.com'
     }
   }
 ];
