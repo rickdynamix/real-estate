@@ -72,7 +72,7 @@ export default function AdminPage() {
           ))}
           {enquiries.length === 0 && (
             <div className="table-row">
-              <span colSpan={4}>No enquiries</span>
+              <div style={{ gridColumn: '1 / -1', textAlign: 'center' }}>No enquiries</div>
             </div>
           )}
         </div>

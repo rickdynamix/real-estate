@@ -79,7 +79,7 @@ export default function SellerDashboardPage() {
           ))}
           {enquiries.length === 0 && (
             <div className="table-row">
-              <span colSpan={4}>No enquiries yet</span>
+              <div style={{ gridColumn: '1 / -1', textAlign: 'center' }}>No enquiries yet</div>
             </div>
           )}
         </div>
