@@ -2,13 +2,42 @@ import Link from 'next/link';
 import { properties } from '../../../lib/properties';
 import { notFound } from 'next/navigation';
 import EnquiryForm from '../../../components/EnquiryForm';
+import type { Metadata } from 'next';
 
 interface Props {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }
 
-export default function PropertyDetailPage({ params }: Props) {
-  const property = properties.find((item) => item.slug === params.slug);
+export async function generateStaticParams() {
+  return properties.map((property) => ({
+    slug: property.slug,
+  }));
+}
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { slug } = await params;
+  const property = properties.find((item) => item.slug === slug);
+
+  if (!property) {
+    return {
+      title: 'Property Not Found | PropEase',
+    };
+  }
+
+  return {
+    title: `${property.title} | PropEase Real Estate`,
+    description: property.description,
+    openGraph: {
+      title: property.title,
+      description: property.description,
+      images: [property.image],
+    },
+  };
+}
+
+export default async function PropertyDetailPage({ params }: Props) {
+  const { slug } = await params;
+  const property = properties.find((item) => item.slug === slug);
 
   if (!property) {
     notFound();

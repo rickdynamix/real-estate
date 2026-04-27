@@ -1,5 +1,6 @@
 import PropertyFilter from '../components/PropertyFilter';
 import PropertyCard from '../components/PropertyCard';
+import ContactForm from '../components/ContactForm';
 import { properties } from '../lib/properties';
 
 export default function HomePage() {
@@ -232,25 +233,7 @@ export default function HomePage() {
             </div>
           </div>
           <div className="contact-form">
-            <form className="enquiry-form">
-              <div>
-                <label htmlFor="name">Name</label>
-                <input type="text" id="name" name="name" required />
-              </div>
-              <div>
-                <label htmlFor="email">Email</label>
-                <input type="email" id="email" name="email" required />
-              </div>
-              <div>
-                <label htmlFor="phone">Phone</label>
-                <input type="tel" id="phone" name="phone" required />
-              </div>
-              <div>
-                <label htmlFor="message">Message</label>
-                <textarea id="message" name="message" rows={4} placeholder="Tell us about your requirements..."></textarea>
-              </div>
-              <button type="submit" className="button primary">Send Message</button>
-            </form>
+            <ContactForm />
           </div>
         </div>
       </section>

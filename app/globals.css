@@ -33,6 +33,7 @@ button, input, select, textarea {
 .page-shell {
   background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   border-radius: 20px 20px 0 0;
   margin-top: 2rem;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
@@ -41,6 +42,7 @@ button, input, select, textarea {
 .hero-section {
   background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
   backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
   border-radius: 20px;
   padding: 3rem;
   margin-bottom: 2rem;
@@ -157,6 +159,7 @@ button, input, select, textarea {
 .stat-card {
   background: rgba(255, 255, 255, 0.9);
   backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 1.5rem;
   padding: 2rem;
@@ -882,6 +885,7 @@ button, input, select, textarea {
 .contact-form {
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   border-radius: 1.25rem;
   padding: 2rem;
   border: 1px solid rgba(255, 255, 255, 0.2);
